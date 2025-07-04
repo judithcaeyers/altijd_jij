@@ -1,1 +1,54 @@
+body {
+  margin: 0;
+  background: #f7f7f7;
+  font-family: 'EB Garamond', serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.foto-stapel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto;
+  height: 80vh;
+}
+
+.foto {
+  position: absolute;
+  width: 200px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 2px solid white;
+  transition: transform 0.3s;
+}
+
+/* Losse stapeling */
+.foto:nth-child(1) {
+  top: 30px;
+  left: 40px;
+  transform: rotate(-5deg);
+}
+.foto:nth-child(2) {
+  top: 90px;
+  left: 160px;
+  transform: rotate(3deg);
+}
+.foto:nth-child(3) {
+  top: 180px;
+  left: 80px;
+  transform: rotate(-8deg);
+}
+/* Voeg extra .nth-child() regels toe per foto */
+
+.foto:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 100;
+}
 
